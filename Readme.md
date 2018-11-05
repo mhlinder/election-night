@@ -10,9 +10,9 @@ for informational and research purposes only.
 
 # Selected forecasts
 
-* *Florida:* [Gillum (D)](#florida-gillum-d)
-* *Georgia:* [Kemp (R)](#georgia-kemp-r)
-* *Kansas:* [Kobach (R)](#kansas-kobach-r)
+* *Florida:* [Gillum (D)](#florida-gillum-d) (confidence: 92%)
+* *Georgia:* [Kemp (R)](#georgia-kemp-r) (83%)
+* *Kansas:* [Kobach (R)](#kansas-kobach-r) (62%)
 
 # Distributions
 
