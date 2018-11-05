@@ -255,20 +255,30 @@ for (ix in 1:length(all.fn)) {
 
     ix.D <- which(grepl("D$", series.names))
     ix.R <- which(grepl("R$", series.names))
-    series.names.cols <- series.names[c(ix.D, ix.R,
-                                        which(!grepl("[RD]$", series.names)))]
+    ix.L <- which(grepl("L$", series.names))
+    ix.I <- which(grepl("I$", series.names))
+    ix.all <- c(ix.D, ix.R, ix.L, ix.I)
+    series.names.cols <- series.names[c(ix.all, which(!grepl("[RDLI]$", series.names)))]
 
     x.dated <- x %>% left_join(dates)
 
-    p.D.win <- mean(apply(m[,sprintf("pi[%d, %d]", c(ix.D, ix.R), T)], 1,
-                          function(x) x[1] > x[2]))
-    p.R.win <- mean(apply(m[,sprintf("pi[%d, %d]", c(ix.D, ix.R), T)], 1,
-                          function(x) x[1] < x[2]))
-    cols <- cols_all[c("Blue2", "Red2", "Purple2")]
-    names(cols) <- series.names.cols
+    p.D.win <- mean(apply(m[,sprintf("pi[%d, %d]", ix.all, T)], 1,
+                          function(x) which.max(x) == 1))
+    p.R.win <- mean(apply(m[,sprintf("pi[%d, %d]", ix.all, T)], 1,
+                          function(x) which.max(x) == 2))
+    p.L.win <- mean(apply(m[,sprintf("pi[%d, %d]", ix.all, T)], 1,
+                          function(x) which.max(x) == 3))
+    p.I.win <- mean(apply(m[,sprintf("pi[%d, %d]", ix.all, T)], 1,
+                          function(x) which.max(x) == 4))
+    
+    cols <- cols_all[c("Blue2", "Red2", "Orange2", "GreenB2", "Purple2")]
+    cols.light <- cols_all[c("Blue2", "Red2", "Orange2", "GreenB2", "Purple2")]
+    names(cols) <- names(cols.light) <- c("D", "R", "L", "I", "Other")
     ##
-    cols.light <- cols_all[c("Blue1", "Red1", "Purple1")]
-    names(cols.light) <- series.names.cols
+    ix.cols <- gsub(".*\\.", "", series.names.cols)
+    cols <- cols[ix.cols]
+    cols.light <- cols.light[ix.cols]
+    names(cols) <- names(cols.light) <- series.names.cols
     ##
     post.mean <- colMeans(m)
     post.sd <- apply(m, 2, sd)
