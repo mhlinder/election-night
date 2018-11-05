@@ -20,7 +20,6 @@ for informational and research purposes only.
 ## Senate
 
 * *Florida:* [Scott (R)](#florida-scott-r) (76%)
-* *Missouri:* [Toss-up](#missouri-toss-up) (50%)
 * *Texas:* [Cruz (R)](#texas-cruz-r) (92%)
 
 # Distributions
