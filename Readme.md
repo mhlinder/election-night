@@ -2,7 +2,8 @@
 5 November 2018
 
 This code forecasts election-day results using a Bayesian structural time
-series model.
+series model. Forecasts represent the most likely candidate to receive
+a plurality of votes.
 
 The data is scraped from
 [RealClearPolitics](https://www.realclearpolitics.com/epolls/latest_polls/)
