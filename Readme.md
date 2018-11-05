@@ -50,10 +50,6 @@ the election held today.
 
 ![](https://raw.githubusercontent.com/mhlinder/election-night/master/out/senate-Florida_Senate_-_Scott_vs__Nelson.png)
 
-### Missouri: Toss-up
-
-![](https://raw.githubusercontent.com/mhlinder/election-night/master/out/senate-Missouri_Senate_-_Hawley_vs__McCaskill.png)
-
 ### Texas: Cruz (R)
 
 ![](https://raw.githubusercontent.com/mhlinder/election-night/master/out/senate-Texas_Senate_-_Cruz_vs__O'Rourke.png)
