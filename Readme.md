@@ -10,9 +10,9 @@ for informational and research purposes only.
 
 # Selected forecasts
 
-* *Florida:* Gillum (D)
-* *Georgia:* Kemp (R)
-* *Kansas:* Kobach (R)
+* *Florida:* [Gillum (D)](#florida-gillum-d)
+* *Georgia:* [Kemp (R)](#georgia-kemp-r)
+* *Kansas:* [Kobach (R)](#kansas-kobach-r)
 
 # Distributions
 
@@ -26,4 +26,4 @@ for informational and research purposes only.
 
 ## Kansas: Kobach (R)
 
-![](https://github.com/mhlinder/election-night/blob/master/out/governor-Kansas_Governor_-_Kobach_vs__Kelly_vs__Orman.png)
+![](https://raw.githubusercontent.com/mhlinder/election-night/master/out/governor-Kansas_Governor_-_Kobach_vs__Kelly_vs__Orman.png)
