@@ -57,6 +57,13 @@ reported in proportions, so to ensure the proper sample size after
 calculating $y_{ij}$, we define $y_{i(r+1)} = N_{i} -
 \sum_{j=1}^{r}y_{ij}$.
 
+It is possible that multiple polls concluded on the same day, in which
+case we have replicates within the day. A basic way to incorporate
+this data into the model without modification is to calculate the
+counts $y_{ij}$ within each poll, then sum within each of the
+categories $j$. WLOG, we assume that when there is more than one
+observation on a single day, we reduce the dimension in this fashion.
+
 We consider the vector of counts
 $\mathbf{y}_{i}=(y_{i1},\dots,y_{i(r+1)}$, and we consider a
 multinomial likelihood:

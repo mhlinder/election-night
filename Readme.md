@@ -19,9 +19,16 @@ for informational and research purposes only.
 
 ## Senate
 
-* *Florida:* [Scott (R)](#florida-scott-r)
+* *Florida:* [Scott (R)](#florida-scott-r) (76%)
+* *Missouri:* [Toss-up](#missouri-toss-up) (50%)
+* *Texas:* [Cruz (R)](#texas-cruz-r) (92%)
 
 # Distributions
+
+Colored regions represent 95\% credible intervals. Points represent
+observed polls, lines are estimated time-course for the true
+(unobserved) proportion of votes each candidate would receive, were
+the election held today.
 
 ## Governor
 
@@ -42,3 +49,12 @@ for informational and research purposes only.
 ### Florida: Scott (R)
 
 ![](https://raw.githubusercontent.com/mhlinder/election-night/master/out/senate-Florida_Senate_-_Scott_vs__Nelson.png)
+
+### Missouri: Toss-up
+
+![](https://raw.githubusercontent.com/mhlinder/election-night/master/out/senate-Missouri_Senate_-_Hawley_vs__McCaskill.png)
+
+### Texas: Cruz (R)
+
+![](https://raw.githubusercontent.com/mhlinder/election-night/master/out/senate-Texas_Senate_-_Cruz_vs__O'Rourke.png)
+

@@ -25,7 +25,8 @@ n <- length(all.fn)
 should.plot.trace <- FALSE
 
 all.out <- list()
-for (ix in 1:length(all.fn)) {
+## skipped house: 34:105
+for (ix in 117:length(all.fn)) {
     fn.dat <- all.fn[ix]
     slug <- slugs[ix]
     print.(sprintf("iteration %d of %d - race %s", ix, n, slug), newline="") 
@@ -47,6 +48,8 @@ for (ix in 1:length(all.fn)) {
         select(-Spread, -Sample) %>%
         arrange(desc(EndDate), desc(StartDate))
     dat$i <- 1:nrow(dat)
+
+    if (nrow(dat) < 4) next
 
     other <- dat %>% select(-Date, -Poll,
                             -N, -VoterType,
@@ -76,10 +79,10 @@ for (ix in 1:length(all.fn)) {
         x[sprintf("%s.N", sn)] <- x[,sn]*x$N
     }
     series.names.N <- sprintf("%s.N", series.names)
-    x <- x[,!colnames(x) %in% series.names]
+    x <- x[,!colnames(x) %in% series.names] %>% filter(!is.na(N))
     x <- x %>%
         group_by(Index) %>%
-        summarize_at(vars(-N, -Index), sum)
+        summarize_at(vars(-N, -Index), sum, na.rm=TRUE)
     x$N <- select(x, -Index) %>% rowSums
     colnames(x) <- gsub("\\.N$", "", colnames(x))
     x[series.names] <- x[series.names] / x$N
