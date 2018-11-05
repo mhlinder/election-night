@@ -6,3 +6,4 @@
 *.log
 *.out
 .Rhistory
+00-tmp.R
